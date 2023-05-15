@@ -2,13 +2,12 @@
   <p> There are many places I've traveled, here's a place for me to store the memories... </p>
   <p> A few places I've been are: </p>
 
-<% places = ["Charleston", "Berlin", "Slovenia", "San Francisco"] %>
 
 <ul>
-  <% for place in places %>
+  <% for place in @places %>
     <li> <%=place%> </li>
 <% end %>
 
 </ul>
 
-<p> So far, I've been to <%= places.count %> places!</p>
+<p> So far, I've been to <%= @places.count %> places!</p>
