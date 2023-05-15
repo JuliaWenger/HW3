@@ -1,2 +1,6 @@
 class PostsController < ApplicationController
-end
+  def index 
+    @posts = ["Charleston", "Berlin", "Slovenia", "San Francisco"]
+ 
+
+  end
