@@ -6,7 +6,7 @@
   <ul>
   <% for place in @places %>
     <li>
-    <a> href = "/places/<%=place["name"] %>">" 
+    <a href="/places/<%=place["id"] %>"> 
     <%=place["name"]%> </a>
     </li> 
 
@@ -17,5 +17,5 @@
 <p> So far, I've been to <%= @places.count %> places!</p>
 
 <p> 
-<a href="/places/new"> Create a new post </a>
+<a href="/places/new"> Submit a new place </a>
 <p>
