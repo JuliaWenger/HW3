@@ -5,10 +5,17 @@
 
   <ul>
   <% for place in @places %>
-    <li> <%=place%> </li>
+    <li>
+    <a> href = "/places/<%=place["name"] %>">" 
+    <%=place["name"]%> </a>
+    </li> 
 
 <% end %>
 
 </ul>
 
 <p> So far, I've been to <%= @places.count %> places!</p>
+
+<p> 
+<a href="/places"> Back to All Posts </a>
+<p>

@@ -4,3 +4,7 @@ class PostsController < ApplicationController
  
 
   end
+
+#new 
+
+#create 
