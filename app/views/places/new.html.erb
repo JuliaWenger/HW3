@@ -1,0 +1,15 @@
+<h1> New Location Unlocked! <h1>
+
+
+<%= form_with :model => @place do |form| %>
+  <p>
+    <%= form.label "name", "Place Name" %>
+    <%= form.text_field "name" %>
+  </p>
+
+  <%= form.submit %>
+<% end %>
+
+<p> 
+<a href="/places"> Back to All Posts </a>
+<p>
