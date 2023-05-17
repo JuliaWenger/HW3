@@ -1,0 +1,13 @@
+<h1> What I Did </h1>
+  <p> To help me remember what I did </p>
+
+  <% for post in @posts %>
+    <li>
+    <a href="/posts/<%=post["id"] %>"> 
+    <%=post["title"]%> </a>
+    </li> 
+<% end %>
+
+<p> 
+<a href="/posts/new"> Submit a new post </a>
+<p>
