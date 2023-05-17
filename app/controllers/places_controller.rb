@@ -16,6 +16,9 @@ class PlacesController < ApplicationController
   def create 
   #make new place
     @place = Place.new 
+
+    puts params["place"]
+
   # assign user-entered form data to Company's columns
     @place["name"] = params["place"]["name"]
 

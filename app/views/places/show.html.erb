@@ -7,6 +7,7 @@
 <h3>Posts </h3>
 
 <ul>
+<!-- cannot figure out why this keeps returning a [nil] since I already defined post and posts in the post_controller -->
   <% for post in @posts %>
     <li>
       <%= post["title"] %>
@@ -15,4 +16,11 @@
   <% end %>
 </ul>
 
+<p>
+  <a href="/posts/new?place_id=<%= @place["id"] %>">New Post</a>
+</p>
+
+<p>
+  <a href="/places">Back to All Places</a>
+</p>
 
