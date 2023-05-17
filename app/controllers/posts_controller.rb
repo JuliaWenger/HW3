@@ -21,7 +21,9 @@ def create
   @post.save 
 
   #redirect user back to home page
+  
   redirect_to "/places/#{@post["place_id"]}"
+
   end 
 
 end 

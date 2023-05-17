@@ -6,6 +6,14 @@
 
 <h3>Posts </h3>
 
+<!-- cannot figure out why the for--- in structure keeps returning a nil value error in the below code. 
+Trying to tie the posts to the place_id rather than having them stay in the posts page, but can't figure out the nil value erro -->
+<!--<ul>
+  <% for post in @posts %>
+    <li><%= contact["last_name"] %>, <%= contact["first_name"] %></li>
+  <% end %>
+</ul> --> 
+
 <p>
   <a href="/posts/new?place_id=<%= @place["id"] %>">New Post</a>
 </p>
