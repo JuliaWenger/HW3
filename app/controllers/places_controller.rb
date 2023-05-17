@@ -9,15 +9,21 @@ class PlacesController < ApplicationController
     @places = Place.where({"place_id" => @place["id"]})
   end 
 
+
   def new 
     @place = Place.new 
   end 
 
   def create 
+  #make new place
     @place = Place.new 
+  # assign user-entered form data to Company's columns
     @place["name"] = params["place"]["name"]
 
+  #save new entry
     @place.save
+
+  #redirect to home page 
     redirect_to "/places"
   end 
 end 
