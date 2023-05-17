@@ -2,5 +2,17 @@
 
 <h1><%= @place["name"] %></h1>
 
-<h3>Places </h3>
+<p> What did I do while in <%= @place["name"] %>? </p>
+
+<h3>Posts </h3>
+
+<ul>
+  <% for post in @posts %>
+    <li>
+      <%= post["title"] %>
+      <%= post["posted_on"] %>
+    </li>
+  <% end %>
+</ul>
+
 

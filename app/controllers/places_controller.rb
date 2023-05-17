@@ -9,7 +9,6 @@ class PlacesController < ApplicationController
     @places = Place.where({"place_id" => @place["id"]})
   end 
 
-
   def new 
     @place = Place.new 
   end 
