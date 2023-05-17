@@ -1,31 +1,23 @@
 class PostsController < ApplicationController
-  def index 
-  end
-
-
-#new 
-def new
+ #new 
+  def new
   @post = Post.new 
-end 
+  @post["place_id"] = params["place_id"]
+  end 
 
-#show 
-def show 
-  @post = Post.find_by({"id" => params["id"]})
-end 
-
-#create
+def create
   @post = Post.new 
+
 # assign user-entered form data to Post's columns
-  @post["title"] = param["post"]["title"]
-  @post["description"] = param["post"]["description"]
-  @post["posted_on"] = param["post"]["posted_on"]
-  @post["place_id"] = param["post"]["place_id"]
+  @post["title"] = params["post"]["title"]
+  @post["description"] = params["post"]["description"]
+  @post["posted_on"] = params["post"]["posted_on"]
+  @post["place_id"] = params["post"]["place_id"]
 
   #save
   @post.save 
 
   #redirect user back to home page
   redirect_to "/posts/#{@place["place_id"]}"
-end 
-
+  end 
 end 

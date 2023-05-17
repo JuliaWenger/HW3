@@ -1,10 +1,21 @@
-<!-- Post details page -->
+<!-- Places details page -->
 
-<h1><%= @place["last_name"] %>, <%= @contact["first_name"] %></h1>
+<h3>Places </h3>
 
 <ul>
-  <li><%= @place["email"] %></li>
-  <li><%= @contact["phone_number"] %></li>
+  <% for posts in @posts %>
+    <li>
+      <%= post["title"] %>
+      <%= post["description"] %>
+      <%= post["date"]%>
+    </li>
+  <% end %>
 </ul>
 
-<p><a href="/places/<%= @place["id"] %>">Back to <%= @place["name"] %></a></p>
+<p>
+  <a href="/posts/new?place_id=<%= @place["id"] %>">New Post</a>
+</p>
+
+<p>
+  <a href="/places">Back to All Places</a>
+</p>
